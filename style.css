@@ -73,6 +73,9 @@
     justify-content: end;
 
 }
+.hero-img img{
+    margin-top: 30px;
+}
 
 .hero-txt{
     /* background: black; */

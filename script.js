@@ -5,3 +5,8 @@ console.log(navigation_links)
 hamburger[0].addEventListener('click',function(){
     navigation_links.classList.toggle('open');
 })
+
+navigation_links.addEventListener('blur', () => {
+    console.log('here')
+    navigation_links.classList.toggle('open');
+});
