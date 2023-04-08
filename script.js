@@ -6,10 +6,12 @@ hamburger[0].addEventListener('click',function(){
     navigation_links.classList.toggle('open');
 })
 
-// navigation_links.addEventListener('blur', () => {
+navigation_links.addEventListener('blur', () => {
 
-//     navigation_links.classList.toggle('open');
-// });
+    if(navigation_links.classList.contains('open')){
+        navigation_links.classList.remove('open');
+    }
+});
 
 const nav_links = document.querySelectorAll('.navlinks li');
 // console.log(nav_links)
