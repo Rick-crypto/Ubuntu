@@ -1,12 +1,23 @@
 const hamburger = document.getElementsByClassName('ham');
-console.log(hamburger)
+
 const navigation_links = document.querySelector('.navlinks');
-console.log(navigation_links)
+
 hamburger[0].addEventListener('click',function(){
     navigation_links.classList.toggle('open');
 })
 
-navigation_links.addEventListener('blur', () => {
-    console.log('here')
-    navigation_links.classList.toggle('open');
+// navigation_links.addEventListener('blur', () => {
+
+//     navigation_links.classList.toggle('open');
+// });
+
+const nav_links = document.querySelectorAll('.navlinks li');
+// console.log(nav_links)
+nav_links.forEach(element => {
+    element.addEventListener('click',function(){
+        if(navigation_links.classList.contains('open')){
+            navigation_links.classList.remove('open');
+        }
+        
+    })
 });
